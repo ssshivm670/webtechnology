@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <head>
+	<?php include('config.php');?>
+    <meta charset="UTF-8">
+    <title>Marks</title>
+    <!--link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">  
+    </head>
+	<body>
+	
+	<div class=form>
+	<h1>Enter Roll Number</h1>
+        <div class="field-wrap">
+            <label>Roll Number<span class="req">*</span></label>
+            <input type="text" name="rollno" required autocomplete="off"/>
+			<?php
+		echo "sdsd";
+		$sem1=$POST['selected_sem'];
+		$ia_no=$_POST['selected_ia'];
+		$year=$_POST['selected_year'];
+		$sub=$_POST['sub'];
+		$table=$year.'_'.$sem.'_'.$ia_no.'_'.$subject;
+		$SQL=mysql_query('SELECT * FROM question_table where sem = $sem1 and ia_no=$ia_no and subject=$sub and year=$year;');
+		echo $SQL.'ASDASD';
+		while($record1=mysql_fetch_array())
+		{
+			echo $record1['Question'];
+		}
+	?>
+    </div>
+	<h1>Enter Marks</h1>
+	<table>
+	<tr>
+		<th>Q1 a<th>Q1 b<th>Q1 c<th>Q1 d<th>Q1 e<th>Q1 f<th>Q1 g<th>Q1 h</tr>
+	</tr>
+	<tr>
+		<th><input type=text required><td><input type=text required><td><input type=text required><td><input type=text required><td><input type=text required><td><input type=text required><td><input type=text required><td><input type=text required>
+	</tr>
+	<tr>
+		<th>Q2 a<th>Q2 b
+	</tr>
+	<tr>
+		<th><input type=text required><td><input type=text required>
+	</tr>
+	<tr>
+		<th>Q3 a<th>Q3 b
+	</tr>
+	<tr>
+		<th><input type=text required><td><input type=text required>
+	</tr>
+	</table>
+	<ul class=tab-group1>
+	<li><a href="marks.html">Add New</a></li>
+	<li class="tab"><p></p></li>
+	<li><a href="sel.php">Back</a></li>
+	</ul>
+	<br><br><br>
+	</div>
+    <script src='js/jquery.min.js'></script>
+
+        <script src="js/index.js"></script>
+  
+
+</body>
+</html>

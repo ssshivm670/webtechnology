@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+ 
+  </head> 
+ <body>
+	<div class="form">		
+        <div id="login">                          
+          <h1>Welcome Back!</h1>
+			<form action="enter_ceo.php" method="post" name="myform"><br>
+				<div class="field-wrap">
+					<label>
+						Enter year<span class="req">*</span>
+					</label>
+					<input type="text" name="year" required autocomplete=off/><br><br>
+					<label>
+						Enter semester<span class="req">*</span>
+					</label>
+					<input type="integer" name="sem" required autocomplete=off/><br><br>
+					<label>
+						Enter subject<span class="req">*</span>
+					</label>
+					<input type="text" name="subject" required autocomplete=off/><br><br>
+					<label>
+						Enter IA number<span class="req">*</span>
+					</label>
+					<input type="integer" name="ia_no" required autocomplete=off/><br><br>
+					<label>
+						Enter total number of questions<span class="req">*</span>
+					</label>
+					<input type="integer" name="que" required autocomplete=off/><br><br>
+					<button type="submit" name="result" value="SUBMIT" class="button button-block"/>Enter</button><br><br>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src='js/jquery.min.js'></script>
+        <script src="js/index.js"></script>
+  </body>
+  <?php
+  
+  ?>
+  
+</html>
+		 
